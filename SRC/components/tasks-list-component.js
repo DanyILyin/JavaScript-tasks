@@ -41,6 +41,11 @@ function createFormTasksListTemplate() {
             columnTasks.innerHTML += ADDTask(task)
         })
 
+        if (columnElement.name == 'Корзина')
+        {
+            columnTasks.innerHTML += '<input class="button-delete" type="button" value=" x Удалить "></input>';
+        }
+
         tasksWindow.appendChild(columnTasks);
     })
     function ADDTask (text) {
