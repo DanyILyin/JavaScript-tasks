@@ -1,14 +1,16 @@
 import {createElement} from "../render.js";
 
-function createFormAddTaskBoardTemplate() {
+
+
+function createFormOneTaskTemplate(text) {
     return (
-                `<div class="type-of-content-block"></div>`
+                `<div class="task-li">${text}</div>`
             );
 }
 
-export class FormAddTaskBoardComponent {
-    getTemplate() {
-        return createFormAddTaskBoardTemplate();
+export class FormOneTaskComponent {
+    getTemplate(text) {
+        return createFormOneTaskTemplate(text);
     }
 
 
@@ -16,8 +18,6 @@ export class FormAddTaskBoardComponent {
         if (!this.element) {
         this.element = createElement(this.getTemplate());
         }
-
-
         return this.element;
     }
 

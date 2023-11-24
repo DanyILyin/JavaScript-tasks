@@ -52,13 +52,11 @@ body{
 }
 
 
-/* Не забудь убрать!!! */
+
 .type-of-content-block{
-    /* width: 500px;
-    height: 500px;
-    background-color: #b1696d; */
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     
 }
 

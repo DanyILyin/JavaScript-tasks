@@ -2,7 +2,7 @@ import {createElement} from "../render.js";
 
 function createFormAddTaskBoardTemplate() {
     return (
-                `<div class="type-of-content-block"></div>`
+                `<div class="sss"></div>`
             );
 }
 
