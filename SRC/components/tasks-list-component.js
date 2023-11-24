@@ -5,20 +5,24 @@ const OneTask = new FormOneTaskComponent();
 
 let nameOfTaskList = [
     {
-        name: 'Имя Списка',
-        tasks: [ 'Тест1', 'Тест2', 'Тест3', 'Тест4' ]
+        nameOfBlock: 'name-of-backlog-block',
+        name: 'Бэклог',
+        tasks: [ 'Выучить JS', 'Выучить React', 'Сделать домашку']
     },
     {
-        name: 'Имя Списка2',
-        tasks: [ 'Тест1', 'Тест2', 'Тест3', 'Тест4' ]
+        nameOfBlock: 'name-of-processing-block',
+        name: 'В процессе',
+        tasks: [ 'Выпить смузи', 'Перестать тупить']
     },
     {
-        name: 'Имя Списка3',
-        tasks: [ 'Тест1', 'Тест2', 'Тест3', 'Тест4' ]
+        nameOfBlock: 'name-of-done-block',
+        name: 'Готово',
+        tasks: [ 'Позвонить маме', 'Погладить Кекса???' ]
     },
     {
-        name: 'Имя Списка4',
-        tasks: [ 'Тест1', 'Тест2', 'Тест3', 'Тест4' ]
+        nameOfBlock: 'name-of-basket-block',
+        name: 'Корзина',
+        tasks: [ 'Сходить погулять', 'Катку в доту']
     },
 ];
 
@@ -31,7 +35,7 @@ function createFormTasksListTemplate() {
     nameOfTaskList.forEach(columnElement => {
         const columnTasks = document.createElement('div');
         columnTasks.className = 'task-block';
-        columnTasks.innerHTML = `<h3 class="name-of-task-block">${columnElement.name}</h3>`;
+        columnTasks.innerHTML = `<h3 class="${columnElement.nameOfBlock}">${columnElement.name}</h3>`;
         
         columnElement.tasks.forEach(task => {
             columnTasks.innerHTML += ADDTask(task)
