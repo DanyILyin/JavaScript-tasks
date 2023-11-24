@@ -66,20 +66,7 @@ body{
     padding-left: 0px;
     list-style: none;
 }
-.name-of-backlog-block{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #86858a;
-    padding-inline: 15px;
-    padding-top: 8px;
-    text-align: center;
-    width: max-content;
-    height: 30px;
-    background-color: #e3e3e3;
-    border-radius: 7px;
-    border-style: solid;
-    border-width: 1px;
-    border-color:#e3e3e3;
-}
+
 
 .in-processing-block{
     margin: 0px;
@@ -88,20 +75,7 @@ body{
     list-style: none;
 }
 
-.name-of-processing-block{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #8386d2;
-    padding-inline: 15px;
-    padding-top: 8px;
-    text-align: center;
-    width: max-content;
-    height: 30px;
-    background-color: #d4e1ff;
-    border-radius: 7px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #dbe5fd;
-}
+
 
 .done-block{
     margin: 0px;
@@ -109,20 +83,7 @@ body{
     padding-left: 0px;
     list-style: none;
 }
-.name-of-done-block{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #8eb884;
-    padding-inline: 15px;
-    padding-top: 8px;
-    text-align: center;
-    width: max-content;
-    height: 30px;
-    background-color: #ccf6cc;
-    border-radius: 7px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #ccf6cc;
-}
+
 
 .basket-block{
     margin: 0px;
@@ -131,20 +92,7 @@ body{
     list-style: none;
 }
 
-.name-of-basket-block{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #b1696d;
-    padding-inline: 15px;
-    padding-top: 8px;
-    text-align: center;
-    width: max-content;
-    height: 30px;
-    background-color: #f4d9d9;
-    border-radius: 7px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #f4d9d9;
-}
+
 
 
 
