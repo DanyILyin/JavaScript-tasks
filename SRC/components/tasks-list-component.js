@@ -20,13 +20,14 @@ function createFormTasksListTemplate() {
     }
     const groupByStatus = getGroupBy("status");
     let groupTasksGroup = groupByStatus(tasks);
-    // console.log(groupTasks);
-    const groupTasks = [groupTasksGroup[2], groupTasksGroup[0], groupTasksGroup[3], groupTasksGroup[1]] 
-    // swap(groupTasks, 0, 2) 
-    console.log(groupTasks);
-    // const testmass = [0, 3, 2, 1]
-    // const groupTasksGroup
 
+    // Сортируем массив по порядку
+    const testmass = [2,0,3,1];
+    const groupTasks = testmass.reduce((acc, index) => {
+        const key = Object.keys(groupTasksGroup)[index];
+        acc[key] = groupTasksGroup[key];
+        return acc;
+    }, {});
 
     // Проходимся по массиву переводим данные в HTML код
     Object.values(groupTasks).forEach((columnElement) => {
@@ -78,3 +79,4 @@ function defineName (name) {
             return name
     }
 }
+

@@ -56,7 +56,7 @@ export const tasks = [
     },    
     {
         id: '11',
-        title: 'Софья научись прогать',
+        title: 'научись прогать',
         status: 'in-processing'
     },
     // {
