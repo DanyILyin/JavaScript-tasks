@@ -1,4 +1,7 @@
-import {createElement} from "../render.js";
+import { createElement } from "../render.js";
+import { tasks } from "../mock/task.js";
+let tasksArr = tasks;
+
 
 function createFormAddTaskComponentTemplate() {
     return (
@@ -6,12 +9,13 @@ function createFormAddTaskComponentTemplate() {
             <div class="create-task-container">
                 <h2 class="new-task-text">Новая задача</h2> 
                     <div class="input-container">
-                        <input class="input-place" type="text" placeholder=" Название задачи...">
-                        <input class="button-enter" type="button" value=" + Добавить ">
+                        <input class="input-place" id="input-id" type="text" placeholder=" Название задачи...">
+                        <input class="button-enter" id="myButton" type="button" value=" + Добавить ">
+
                     </div>
             </div>
         </div>`
-            );
+    );
 }
 
 export class FormAddTaskComponent {
@@ -22,7 +26,7 @@ export class FormAddTaskComponent {
 
     getElement() {
         if (!this.element) {
-        this.element = createElement(this.getTemplate());
+            this.element = createElement(this.getTemplate());
         }
 
 
@@ -34,3 +38,5 @@ export class FormAddTaskComponent {
         this.element = null;
     }
 }
+
+

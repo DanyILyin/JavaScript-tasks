@@ -1,7 +1,6 @@
 import { createElement } from "../render.js";
 import { FormOneTaskComponent } from "./one-task-component.js";
 import { tasks } from "../mock/task.js";
-import { TasksService } from "../service/task-server.js";
 
 function createFormTasksListTemplate() {
     const tasksWindow = document.createElement("div");
@@ -38,12 +37,21 @@ function createFormTasksListTemplate() {
         columnTaskName.innerHTML += `${defineName(columnElement[0].status)}`;
         columnTasks.innerHTML += columnTaskName.outerHTML;
 
+        
         Object.values(columnElement).forEach((data) => {
             const task = new FormOneTaskComponent(data);
             const template = task.getTemplate();
             columnTasks.innerHTML += template;
         });
-
+        
+        if (columnElement[0].status == 'basket'){
+            // console.log(columnElement[0].status);
+            const basketElement = document.createElement("button");
+            basketElement.className = `button-delete`;
+            basketElement.id = 'button-delete'
+            basketElement.innerHTML = `Очистить`;
+            columnTasks.innerHTML += basketElement.outerHTML;
+        }
         tasksWindow.innerHTML+=columnTasks.outerHTML;
     });
 

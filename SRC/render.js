@@ -12,7 +12,11 @@ function createElement(template) {
 }
 
 function render(component, container, place = RenderPosition.BEFOREEND) {
-container.insertAdjacentElement(place, component.getElement());
+    container.insertAdjacentElement(place, component.getElement());
 }
+
+function rerender(){
+
+};
 
 export {RenderPosition, createElement, render};
